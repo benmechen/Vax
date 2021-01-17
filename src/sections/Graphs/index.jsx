@@ -21,7 +21,7 @@ const Graphs = () => {
 			<h1 className="text-5xl font-semibold text-center">
 				Vaccines In Graphs
 			</h1>
-			<BarChart title={dataset.title} data={dataset.data} />
+			{/* <BarChart title={dataset.title} data={dataset.data} /> */}
 		</div>
 	);
 };

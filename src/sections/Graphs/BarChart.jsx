@@ -6,19 +6,23 @@ const BarChart = ({ data, title, colour }) => {
 	const canvasRef = React.createRef();
 
 	useEffect(() => {
-		const chart = new Chart(canvasRef.current, {
-			type: 'horizontalBar',
-			data: {
-				labels: data.map((d) => d.label),
-				datasets: [
-					{
-						label: title,
-						data: data.map((d) => d.value),
-						backgroundColor: colour,
-					},
-				],
+		const chart = new Chart(
+			canvasRef.current,
+			{
+				type: 'horizontalBar',
+				data: {
+					labels: data.map((d) => d.label),
+					datasets: [
+						{
+							label: title,
+							data: data.map((d) => d.value),
+							backgroundColor: colour,
+						},
+					],
+				},
 			},
-		});
+			[],
+		);
 
 		setChart(chart);
 	});
