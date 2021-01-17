@@ -1,0 +1,73 @@
+{
+	"length": 6,
+	"maxPageLimit": 2500,
+	"data": [
+		{
+			"areaType": "overview",
+			"areaName": "United Kingdom",
+			"areaCode": "K02000001",
+			"date": "2021-01-15",
+			"newPeopleVaccinatedFirstDoseByPublishDate": 324233,
+			"newPeopleVaccinatedSecondDoseByPublishDate": 4027,
+			"cumPeopleVaccinatedFirstDoseByPublishDate": 3559179,
+			"cumPeopleVaccinatedSecondDoseByPublishDate": 447261
+		},
+		{
+			"areaType": "overview",
+			"areaName": "United Kingdom",
+			"areaCode": "K02000001",
+			"date": "2021-01-14",
+			"newPeopleVaccinatedFirstDoseByPublishDate": 316694,
+			"newPeopleVaccinatedSecondDoseByPublishDate": 5257,
+			"cumPeopleVaccinatedFirstDoseByPublishDate": 3234946,
+			"cumPeopleVaccinatedSecondDoseByPublishDate": 443234
+		},
+		{
+			"areaType": "overview",
+			"areaName": "United Kingdom",
+			"areaCode": "K02000001",
+			"date": "2021-01-13",
+			"newPeopleVaccinatedFirstDoseByPublishDate": 278943,
+			"newPeopleVaccinatedSecondDoseByPublishDate": 9745,
+			"cumPeopleVaccinatedFirstDoseByPublishDate": 2918252,
+			"cumPeopleVaccinatedSecondDoseByPublishDate": 437977
+		},
+		{
+			"areaType": "overview",
+			"areaName": "United Kingdom",
+			"areaCode": "K02000001",
+			"date": "2021-01-12",
+			"newPeopleVaccinatedFirstDoseByPublishDate": 207661,
+			"newPeopleVaccinatedSecondDoseByPublishDate": 16065,
+			"cumPeopleVaccinatedFirstDoseByPublishDate": 2639309,
+			"cumPeopleVaccinatedSecondDoseByPublishDate": 428232
+		},
+		{
+			"areaType": "overview",
+			"areaName": "United Kingdom",
+			"areaCode": "K02000001",
+			"date": "2021-01-11",
+			"newPeopleVaccinatedFirstDoseByPublishDate": 145076,
+			"newPeopleVaccinatedSecondDoseByPublishDate": 20768,
+			"cumPeopleVaccinatedFirstDoseByPublishDate": 2431648,
+			"cumPeopleVaccinatedSecondDoseByPublishDate": 412167
+		},
+		{
+			"areaType": "overview",
+			"areaName": "United Kingdom",
+			"areaCode": "K02000001",
+			"date": "2021-01-10",
+			"newPeopleVaccinatedFirstDoseByPublishDate": null,
+			"newPeopleVaccinatedSecondDoseByPublishDate": null,
+			"cumPeopleVaccinatedFirstDoseByPublishDate": 2286572,
+			"cumPeopleVaccinatedSecondDoseByPublishDate": 391399
+		}
+	],
+	"pagination": {
+		"current": "/v1/data?filters=areaType=overview&structure=%7B%22areaType%22:%22areaType%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22date%22:%22date%22,%22newPeopleVaccinatedFirstDoseByPublishDate%22:%22newPeopleVaccinatedFirstDoseByPublishDate%22,%22newPeopleVaccinatedSecondDoseByPublishDate%22:%22newPeopleVaccinatedSecondDoseByPublishDate%22,%22cumPeopleVaccinatedFirstDoseByPublishDate%22:%22cumPeopleVaccinatedFirstDoseByPublishDate%22,%22cumPeopleVaccinatedSecondDoseByPublishDate%22:%22cumPeopleVaccinatedSecondDoseByPublishDate%22%7D&format=json&page=1",
+		"next": null,
+		"previous": null,
+		"first": "/v1/data?filters=areaType=overview&structure=%7B%22areaType%22:%22areaType%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22date%22:%22date%22,%22newPeopleVaccinatedFirstDoseByPublishDate%22:%22newPeopleVaccinatedFirstDoseByPublishDate%22,%22newPeopleVaccinatedSecondDoseByPublishDate%22:%22newPeopleVaccinatedSecondDoseByPublishDate%22,%22cumPeopleVaccinatedFirstDoseByPublishDate%22:%22cumPeopleVaccinatedFirstDoseByPublishDate%22,%22cumPeopleVaccinatedSecondDoseByPublishDate%22:%22cumPeopleVaccinatedSecondDoseByPublishDate%22%7D&format=json&page=1",
+		"last": "/v1/data?filters=areaType=overview&structure=%7B%22areaType%22:%22areaType%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22date%22:%22date%22,%22newPeopleVaccinatedFirstDoseByPublishDate%22:%22newPeopleVaccinatedFirstDoseByPublishDate%22,%22newPeopleVaccinatedSecondDoseByPublishDate%22:%22newPeopleVaccinatedSecondDoseByPublishDate%22,%22cumPeopleVaccinatedFirstDoseByPublishDate%22:%22cumPeopleVaccinatedFirstDoseByPublishDate%22,%22cumPeopleVaccinatedSecondDoseByPublishDate%22:%22cumPeopleVaccinatedSecondDoseByPublishDate%22%7D&format=json&page=1"
+	}
+}

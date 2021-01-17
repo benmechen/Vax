@@ -8,12 +8,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "chart.js": "^2.9.4",
     "gatsby": "^2.21.0",
     "gatsby-plugin-manifest": "^2.4.1",
     "gatsby-plugin-postcss": "^2.3.0",

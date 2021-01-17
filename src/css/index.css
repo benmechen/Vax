@@ -1,0 +1,41 @@
+.cls-1 {
+	fill: #e53e3e;
+}
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+	fill: none;
+	stroke: #000;
+}
+.cls-2,
+.cls-6 {
+	stroke-miterlimit: 6.89;
+}
+.cls-2 {
+	stroke-width: 14.7px;
+}
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+	stroke-linecap: round;
+}
+.cls-3,
+.cls-4,
+.cls-5 {
+	stroke-linejoin: round;
+}
+.cls-3 {
+	stroke-width: 14.43px;
+}
+.cls-4 {
+	stroke-width: 24.41px;
+}
+.cls-5 {
+	stroke-width: 22.15px;
+}
+.cls-6 {
+	stroke-width: 12.21px;
+}

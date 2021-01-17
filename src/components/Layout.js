@@ -1,21 +1,33 @@
-import React from "react"
-import SEO from "./SEO"
+import React, { useContext } from 'react';
+import { DataContext } from '../data.provider';
+import SEO from './SEO';
 
 const Layout = ({ children }) => {
-  return (
-    <>
-      <SEO />
-      <div className="flex flex-col min-h-screen bg-gray-200">
-        <header className="p-4 bg-teal-500 text-white font-semibold">
-          <h1 className="max-w-4xl mx-auto">gatsby-starter-tailwind-css</h1>
-        </header>
-        {children}
-        <footer className="py-2 text-center text-gray-600 text-xs">
-          &copy; Melanie Nolan 2020
-        </footer>
-      </div>
-    </>
-  )
-}
+	const { date } = useContext(DataContext);
 
-export default Layout
+	return (
+		<>
+			<SEO />
+			<div className="flex flex-col min-h-screen bg-gray-200">
+				<header className="p-4 bg-black text-white font-semibold flex items-center">
+					<h1 className="max-w-4xl mx-auto text-xl">
+						UK Covid 19 Vaccination Tracker
+					</h1>
+					<span className="font-light float-right">
+						{date && `Data from ${date.toLocaleDateString()}`}
+					</span>
+				</header>
+				{children}
+				<footer className="py-2 text-center text-gray-600 text-xs">
+					&copy;{' '}
+					<a href="https://ben.mechen.co" target="_blank">
+						Ben Mechen
+					</a>{' '}
+					2021
+				</footer>
+			</div>
+		</>
+	);
+};
+
+export default Layout;
