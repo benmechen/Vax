@@ -10,10 +10,10 @@ const Layout = ({ children }) => {
 			<SEO />
 			<div className="flex flex-col min-h-screen bg-gray-200">
 				<header className="p-4 bg-black text-white font-semibold flex items-center">
-					<h1 className="max-w-4xl mx-auto text-xl">
+					<h1 className="max-w-4xl mx-auto text-xl text-center">
 						UK Covid 19 Vaccination Tracker
 					</h1>
-					<span className="font-light float-right">
+					<span className="font-light absolute right-0 mr-4">
 						{date && `Data from ${date.toLocaleDateString()}`}
 					</span>
 				</header>

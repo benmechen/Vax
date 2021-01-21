@@ -1,9 +1,9 @@
 import React from 'react';
+import DataProvider from '../data.provider';
 import Layout from '../components/Layout';
 import Syringes from '../sections/Syringes/';
 import Numbers from '../sections/Numbers';
 import Population from '../sections/Population';
-import DataProvider from '../data.provider';
 import Graphs from '../sections/Graphs';
 import '../css/index.css';
 

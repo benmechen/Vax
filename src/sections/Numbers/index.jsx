@@ -109,16 +109,29 @@ const Numbers = () => {
 					className="ml-2"
 				/>
 			</div>
-			<div className="flex flex-col md:flex-row items-center justify-around mt-4 w-full px-8 md:px-0">
-				<NumbersCard value={totalDoses.first} title="1st Dose Total" />
-				<NumbersCard value={totalDoses.second} title="2nd Dose Total" />
+			{/* <div className="flex flex-col md:flex-row items-center justify-around mt-4 w-full px-8 md:px-0 "> */}
+			<div className="flex flex-col md:flex-row items-center justify-center w-full px-8 md:px-0 mt-4">
+				<NumbersCard
+					value={totalDoses.first}
+					title="1st Dose Total"
+					className="mr-2"
+				/>
+				<NumbersCard
+					value={totalDoses.second}
+					title="2nd Dose Total"
+					className="ml-2"
+				/>
+			</div>
+			<div className="flex flex-col md:flex-row items-center justify-center w-full px-8 md:px-0 mt-4">
 				<NumbersCard
 					value={dailyDoses.first}
 					title="1st Dose Daily Rate"
+					className="mr-2"
 				/>
 				<NumbersCard
 					value={dailyDoses.second}
 					title="2nd Dose Daily Rate"
+					className="ml-2"
 				/>
 			</div>
 

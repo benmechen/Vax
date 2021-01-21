@@ -32,7 +32,10 @@ const DataProvider = ({ children }) => {
 
 	useEffect(() => {
 		const getData = async () => {
-			const res = await fetch(process.env.GATSBY_API_URL);
+			// const res = await fetch(process.env.GATSBY_API_URL);
+			const res = await fetch(
+				'https://coronavirus.data.gov.uk/api/v1/data?filters=areaType=overview&structure=%7B%22areaType%22:%22areaType%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22date%22:%22date%22,%22newPeopleVaccinatedFirstDoseByPublishDate%22:%22newPeopleVaccinatedFirstDoseByPublishDate%22,%22newPeopleVaccinatedSecondDoseByPublishDate%22:%22newPeopleVaccinatedSecondDoseByPublishDate%22,%22cumPeopleVaccinatedFirstDoseByPublishDate%22:%22cumPeopleVaccinatedFirstDoseByPublishDate%22,%22cumPeopleVaccinatedSecondDoseByPublishDate%22:%22cumPeopleVaccinatedSecondDoseByPublishDate%22%7D&format=json',
+			);
 			const data = await res.json();
 
 			if (data.data && Array.isArray(data.data)) {
