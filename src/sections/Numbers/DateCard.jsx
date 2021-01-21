@@ -13,7 +13,7 @@ const DateCard = ({ value }) => {
 							date.getFullYear() - 2000
 					  }`}
 			</h4>
-			<h2 className="text-5xl font-bold py-2 px-8">
+			<h2 className="text-5xl font-bold py-2 px-8 text-center">
 				{!value ? '-' : date.getDate()}
 			</h2>
 		</div>

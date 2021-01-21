@@ -1,33 +1,61 @@
-import React, { useEffect, useState } from 'react';
-import Chart from 'chart.js';
+import React, { useContext } from 'react';
+import { Bar } from 'react-chartjs-2';
+import { DataContext } from '../../data.provider';
 
-const BarChart = ({ data, title, colour }) => {
-	const [chart, setChart] = useState();
-	const canvasRef = React.createRef();
+const BarChart = () => {
+	const { data } = useContext(DataContext);
 
-	useEffect(() => {
-		const chart = new Chart(
-			canvasRef.current,
-			{
-				type: 'horizontalBar',
-				data: {
-					labels: data.map((d) => d.label),
-					datasets: [
+	const datasets = [
+		{
+			title: 'Daily Total (2nd Dose)',
+			data: (data || []).map((dataPoint) => ({
+				label: new Date(dataPoint.date).toLocaleDateString(),
+				value: dataPoint.secondDose,
+			})),
+			colour: '#fc8181',
+		},
+		{
+			title: 'Daily Total (1st Dose)',
+			data: (data || []).map((dataPoint) => ({
+				label: new Date(dataPoint.date).toLocaleDateString(),
+				value: dataPoint.firstDose,
+			})),
+			colour: '#cbd5e0',
+		},
+	];
+
+	return (
+		<Bar
+			data={{
+				labels: datasets[0].data.map((d) => d.label),
+				datasets: datasets.map((dataset) => {
+					const { data, title, colour } = dataset;
+					return {
+						label: title,
+						data: data.map((d) => d.value),
+						backgroundColor: colour,
+					};
+				}),
+			}}
+			options={{
+				scales: {
+					yAxes: [
 						{
-							label: title,
-							data: data.map((d) => d.value),
-							backgroundColor: colour,
+							stacked: true,
+							ticks: {
+								beginAtZero: true,
+							},
+						},
+					],
+					xAxes: [
+						{
+							stacked: true,
 						},
 					],
 				},
-			},
-			[],
-		);
-
-		setChart(chart);
-	});
-
-	return <canvas ref={canvasRef} />;
+			}}
+		/>
+	);
 };
 
 export default BarChart;

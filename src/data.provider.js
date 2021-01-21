@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export const DataContext = React.createContext({
+	data: [],
 	date: null,
 	population: 52453550,
 	topPriorityPopulation: 15000000,
@@ -21,6 +22,7 @@ export const DataContext = React.createContext({
 });
 
 const DataProvider = ({ children }) => {
+	const [data, setData] = useState([]);
 	const [date, setDate] = useState(null);
 	const [totalFirstDose, setTotalFirstDose] = useState(0);
 	const [totalSecondDose, setTotalSecondDose] = useState(0);
@@ -62,6 +64,20 @@ const DataProvider = ({ children }) => {
 					setDate(new Date(data.data[0].date));
 				}
 
+				setData(
+					data.data
+						.map((dataPoint) => ({
+							date: dataPoint.date,
+							firstDose:
+								dataPoint.newPeopleVaccinatedFirstDoseByPublishDate,
+							secondDose:
+								dataPoint.newPeopleVaccinatedSecondDoseByPublishDate,
+						}))
+						.sort((a, b) =>
+							a.date > b.date ? 1 : a.date === b.date ? 0 : -1,
+						),
+				);
+
 				setAverageFirstDose(
 					data.data.reduce((accumulator, value) => {
 						if (value.newPeopleVaccinatedFirstDoseByPublishDate)
@@ -91,6 +107,7 @@ const DataProvider = ({ children }) => {
 	return (
 		<DataContext.Provider
 			value={{
+				data,
 				date,
 				population: 52453550,
 				topPriorityPopulation: 15000000,
