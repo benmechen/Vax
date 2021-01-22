@@ -21,6 +21,7 @@ const Population = () => {
 
 	useEffect(() => {
 		setPopulation(generatePopulation(totalDoses.first, totalDoses.second));
+		// eslint-disable-next-line
 	}, [totalPopulation, totalDoses]);
 
 	return (

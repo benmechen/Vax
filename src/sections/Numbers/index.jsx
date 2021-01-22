@@ -28,11 +28,11 @@ const Numbers = () => {
 		return start;
 	};
 
-	const addWeeks = (date, weeks) => {
-		date = new Date(date);
-		date.setDate(date.getDate() + weeks * 7);
-		return date;
-	};
+	// const addWeeks = (date, weeks) => {
+	// 	date = new Date(date);
+	// 	date.setDate(date.getDate() + weeks * 7);
+	// 	return date;
+	// };
 
 	useEffect(() => {
 		// Top Priority
@@ -77,6 +77,7 @@ const Numbers = () => {
 			new Date(mpf),
 		);
 		setEveryoneSecond(es);
+		// eslint-disable-next-line
 	}, [averageDailyDoses]);
 
 	useEffect(() => {
