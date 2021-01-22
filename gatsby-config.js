@@ -8,6 +8,8 @@ module.exports = {
 		title: 'UK Vaccination Tracker',
 		author: 'Ben Mechen',
 		description: "Visualisation of the UK's Covid 19 vaccination progress",
+		url: 'https://vax.mechen.co',
+		twitterUsername: '@b_mechen',
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

@@ -19,6 +19,14 @@ const SEO = () => {
 				href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;500;600;700;800;900&display=swap"
 				rel="stylesheet"
 			/>
+			<script type="application/ld+json">
+				{JSON.stringify({
+					'@context': 'https://schema.org',
+					'@type': 'Organization',
+					url: 'https://vax.mechen.co',
+					name: title,
+				})}
+			</script>
 		</Helmet>
 	);
 };
