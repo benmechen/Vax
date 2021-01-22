@@ -62,7 +62,14 @@ const RadarChart = () => {
 		],
 	};
 
-	return <Radar data={dataset} />;
+	return (
+		<>
+			<h3 className="text-xl">
+				Doses as a percentage of Priority Groups 1-9
+			</h3>
+			<Radar data={dataset} />
+		</>
+	);
 };
 
 export default RadarChart;

@@ -27,19 +27,24 @@ const DoughnutChart = () => {
 	];
 
 	return (
-		<Doughnut
-			data={{
-				labels: datasets[0].data.map((d) => d.label),
-				datasets: datasets.map((dataset) => {
-					const { data, title, colour } = dataset;
-					return {
-						label: title,
-						data: data.map((d) => d.value),
-						backgroundColor: colour,
-					};
-				}),
-			}}
-		/>
+		<>
+			<h3 className="text-xl">
+				Vaccinated population compared to the remaining population
+			</h3>
+			<Doughnut
+				data={{
+					labels: datasets[0].data.map((d) => d.label),
+					datasets: datasets.map((dataset) => {
+						const { data, title, colour } = dataset;
+						return {
+							label: title,
+							data: data.map((d) => d.value),
+							backgroundColor: colour,
+						};
+					}),
+				}}
+			/>
+		</>
 	);
 };
 
