@@ -13,7 +13,7 @@ const Syringes = () => {
 	}, [totalDoses, population]);
 
 	return (
-		<div className="flex flex-col items-center transform rotate-90 md:rotate-0 mt-24 md:mt-0 w-full scale-125 md:scale-100">
+		<div className="flex flex-col items-center transform rotate-90 md:rotate-0 mt-32 md:mt-0 w-full scale-125 md:scale-100">
 			<div className="w-full flex flex-row items-center justify-center">
 				<h1 className="text-3xl md:text-5xl font-bold capitalize whitespace-no-wrap mr-4">
 					№ 1

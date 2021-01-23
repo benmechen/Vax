@@ -17,8 +17,18 @@ const SEO = () => {
 			<link rel="preconnect" href="https://fonts.gstatic.com" />
 			<link
 				href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;500;600;700;800;900&display=swap"
-				rel="stylesheet"
+				rel="preload"
+				as="style"
+				onload="this.onload=null;this.rel='stylesheet'"
 			/>
+			<noscript>
+				{`
+				<link
+					href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;500;600;700;800;900&display=swap"
+					rel="stylesheet"
+				/>
+			`}
+			</noscript>
 			<script type="application/ld+json">
 				{JSON.stringify({
 					'@context': 'https://schema.org',

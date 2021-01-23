@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { DataContext } from '../data.provider';
 import SEO from './SEO';
+import Loading from '../images/Loading.gif';
 
 const Layout = ({ children }) => {
-	const { date } = useContext(DataContext);
+	const { date, totalDoses } = useContext(DataContext);
 
 	return (
 		<>
@@ -17,6 +18,11 @@ const Layout = ({ children }) => {
 						{date && `Data from ${date.toLocaleDateString()}`}
 					</span>
 				</header>
+				{!totalDoses.first && (
+					<div className="bg-black fixed top-0 left-0 bottom-0 right-0 w-screen h-screen text-white z-20 flex items-center justify-center">
+						<img src={Loading} />
+					</div>
+				)}
 				{children}
 				<footer className="py-2 text-center text-gray-600 text-xs">
 					&copy;{' '}
