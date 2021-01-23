@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { DataContext } from '../data.provider';
 import SEO from './SEO';
-import Loading from '../images/Loading.gif';
+import Loading from '../images/loading.gif';
 
 const Layout = ({ children }) => {
 	const { date, totalDoses } = useContext(DataContext);
